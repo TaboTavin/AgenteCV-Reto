@@ -1,0 +1,7 @@
+steps:
+  - name: gcr.io/cloud-builders/docker@sha256:bbb3d633c5c2813b2ce5245852979e1d637768f4acfc504d8ece288f91e9b60f
+    args: ["build", "-t", "${_IMAGEN}", "."]
+images: ["${_IMAGEN}"]
+options:
+  # Requerido al usar una service account de build dedicada.
+  logging: CLOUD_LOGGING_ONLY

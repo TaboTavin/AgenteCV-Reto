@@ -1,0 +1,82 @@
+name: CI/CD
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-cd-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  ID_PROYECTO: ${{ vars.ID_PROYECTO_GCP }}
+  REGION: us-central1
+  SERVICIO: cv-agent
+
+jobs:
+  pruebas:
+    name: Lint y pruebas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+      - run: uv sync --frozen
+      - name: Lint
+        run: uv run ruff check . && uv run ruff format --check .
+      - name: Pruebas unitarias
+        run: uv run pytest -q
+
+  despliegue:
+    name: Despliegue con evaluación
+    needs: pruebas
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: produccion
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+      - run: uv sync --frozen
+
+      - uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2
+        with:
+          workload_identity_provider: ${{ vars.PROVEEDOR_WIF }}
+          service_account: ${{ vars.SA_DESPLIEGUE }}
+      - uses: google-github-actions/setup-gcloud@e427ad8a34f8676edf47cf7d7925499adf3eb74f # v2
+
+      - name: Construir y publicar imagen
+        run: |
+          IMAGEN="${REGION}-docker.pkg.dev/${ID_PROYECTO}/${SERVICIO}/${SERVICIO}:${GITHUB_SHA::12}"
+          gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
+          docker build -t "$IMAGEN" .
+          docker push "$IMAGEN"
+          echo "IMAGEN=$IMAGEN" >> "$GITHUB_ENV"
+
+      - name: Desplegar revisión candidata sin tráfico
+        run: SIN_TRAFICO=1 ETIQUETA=candidata ./scripts/desplegar.sh
+
+      - name: Evaluar la candidata
+        run: |
+          URL=$(gcloud run services describe "$SERVICIO" --region "$REGION" --format=json \
+            | jq -r '.status.traffic[] | select(.tag=="candidata") | .url')
+          CLAVE=$(gcloud secrets versions access latest --secret="${SERVICIO}-clave-ci")
+          echo "::add-mask::$CLAVE"
+          URL_BASE_EVAL="${URL}/v1" CLAVE_API_EVAL="$CLAVE" \
+            uv run python evaluaciones/ejecutar.py --umbral 0.85 --reporte reporte-evaluacion.json
+
+      - name: Promover a producción
+        run: gcloud run services update-traffic "$SERVICIO" --region "$REGION" --to-latest
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: reporte-evaluacion
+          path: reporte-evaluacion.json
+          if-no-files-found: ignore

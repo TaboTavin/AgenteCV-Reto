@@ -1,0 +1,309 @@
+# Fuente única CV. 
+
+persona:
+  nombre: Christian Gustavo Martínez Ramírez
+  nombre_corto: Christian
+  ubicacion: Ciudad de México, México
+  contacto:
+    email: iChristtiann@me.com
+  idiomas:
+    - idioma: Español
+      nivel: Nativo
+    - idioma: Inglés
+      nivel: C1
+
+resumen: >-
+  Senior machine learning engineer y technical lead con más de 5 años en datos y ML, actualmente en
+  la división de analítica de Grupo Coppel (CENIC), con experiencia en retail y banca (BanCoppel).
+  Construye y opera soluciones de IA generativa en producción: sistemas RAG agénticos, bases
+  vectoriales en Google Cloud, fine-tuning, integración con MCP y evaluación sistemática de calidad.
+  Es responsable de la arquitectura, los estándares y la práctica de MLOps/LLMOps que llevan los
+  modelos de la experimentación a sistemas productivos confiables. Ha impartido RAG y LLMOps en la
+  Facultad de Ciencias de la UNAM.
+
+experiencia:
+  - empresa: Grupo Coppel — CENIC
+    periodo_total: Jun 2022 – Actualidad
+    ubicacion: Ciudad de México
+    roles:
+      - puesto: Senior Machine Learning Engineer & Technical Lead
+        periodo: Dic 2025 – Actualidad
+        logros:
+          - >-
+            Coordina a un equipo de 2 ingenieros junior: asigna y da seguimiento a actividades, define
+            el alcance de sus proyectos y los acompaña con mentoring técnico y revisiones de diseño.
+          - >-
+            Technical lead de la función de machine learning: define la arquitectura, los estándares y
+            la práctica de MLOps que llevan los modelos de la experimentación a sistemas productivos
+            confiables en Coppel retail y BanCoppel.
+          - >-
+            Lidera ATLAS, un motor de RAG agéntico y búsqueda semántica sobre un data catalog
+            empresarial de más de 2,200 tablas en 17 dominios, construido con LangGraph, Ollama y
+            ChromaDB, que ayuda a los stakeholders a descubrir y justificar el acceso a los datos que
+            necesitan.
+          - >-
+            Participa en soluciones de IA generativa en producción para el staff corporativo: asistentes
+            RAG internos, extracción de atributos de productos con LLMs y modelos con fine-tuning.
+          - >-
+            Define prioridades de entrega junto con data scientists, equipos de producto y áreas de
+            negocio, traduciendo objetivos operativos en decisiones de roadmap de ML.
+      - puesto: Data Engineer
+        periodo: Jun 2022 – Dic 2025
+        logros:
+          - >-
+            Diseñó y operó pipelines de ingesta, transformación y calidad de datos en Google Cloud
+            (Cloud Storage, BigQuery, Vertex AI, Looker), sirviendo a sistemas analíticos y operativos
+            con datos consistentes y versionados.
+          - >-
+            Cash demand forecasting (BanCoppel): construyó y llevó a producción un pipeline semanal que
+            soporta 828 modelos de pronóstico a nivel sucursal, desde las fuentes operativas hasta los
+            dashboards de reporte.
+          - >-
+            Estrategia de expansión: integró datos geoespaciales, demográficos y operativos para apoyar
+            el análisis de selección de sitios y expansión.
+          - >-
+            Se convirtió en el referente del equipo en diseño de pipelines y consistencia de datos,
+            revisando diseños y resolviendo problemas entre sistemas junto con data scientists y
+            analistas.
+
+  - empresa: Universidad Nacional Autónoma de México — Facultad de Ciencias
+    periodo_total: Ene 2026 – Ago 2026
+    ubicacion: Ciudad de México
+    roles:
+      - puesto: Ayudante de Profesor (medio tiempo)
+        periodo: Ene 2026 – Ago 2026
+        logros:
+          - >-
+            Impartió las sesiones prácticas de un curso de licenciatura en el que los estudiantes
+            construyen de principio a fin un sistema de retrieval-augmented generation (RAG), cubriendo
+            chunking, embeddings, retrieval vectorial y grounding, junto con los trade-offs detrás de
+            cada decisión de diseño.
+          - >-
+            Introdujo la práctica de LLMOps: evaluación, versionado, monitoreo y las consideraciones
+            operativas de correr sistemas con LLMs más allá de un notebook.
+          - >-
+            Revisó y evaluó los proyectos finales, con retroalimentación técnica sobre implementación y
+            diseño de sistemas.
+          - >-
+            Diseñó un seminario de licenciatura de 16 sesiones sobre IA en videojuegos.
+
+  - empresa: WabiByte
+    periodo_total: Emprendimiento propio (en curso)
+    ubicacion: Ciudad de México
+    roles:
+      - puesto: Fundador
+        periodo: En curso
+        logros:
+          - >-
+            Consultoría de analítica, machine learning e IA. Nació enfocada en analítica de videojuegos
+            (su servicio de diseño adaptativo de juego dio origen al capstone de la maestría) y hoy
+            ofrece servicios de datos, ML e IA a empresas y PYMES.
+
+  - empresa: U Camp
+    periodo_total: Mar 2023 – Dic 2023
+    ubicacion: Remoto
+    roles:
+      - puesto: Lead Instructor (medio tiempo)
+        periodo: Mar 2023 – Dic 2023
+        logros:
+          - >-
+            Impartió un bootcamp de Unity y C# dentro de un diplomado profesional, cubriendo gameplay
+            programming, sistemas en tiempo real, realidad aumentada e IA para comportamiento de NPCs.
+          - >-
+            Diseñó e impartió el plan de estudios, desde los fundamentos del motor hasta la entrega
+            completa de proyectos; los participantes desarrollaron mini-juegos terminados.
+
+  - empresa: Euler Labs
+    periodo_total: Ago 2021 – Ago 2023
+    ubicacion: Ciudad de México
+    roles:
+      - puesto: Founder & Lead Developer
+        periodo: Ago 2021 – Ago 2023
+        logros:
+          - >-
+            Fundó y operó en solitario una empresa de tecnología para videojuegos derivada de su tesis
+            de licenciatura, que analizó cómo los desarrolladores estaban adaptando blockchain a los
+            videojuegos; construyó el estudio sobre la premisa inversa: primero el gameplay, después la
+            propiedad de activos.
+          - >-
+            Diseñó y construyó los sistemas centrales de gameplay en Unity y C#, e implementó los smart
+            contracts y el almacenamiento descentralizado que manejaban la emisión, propiedad y
+            transferencia de activos dentro del juego.
+          - >-
+            Desarrolló los prototipos para capturar telemetría de jugadores (eventos de sesión,
+            progresión e interacción con activos) y la analizó para guiar la iteración de diseño sobre
+            qué mecánicas sostenían la atención.
+
+  - empresa: Hibe
+    periodo_total: Dic 2021 – Jun 2022
+    ubicacion: Remoto
+    roles:
+      - puesto: Unity & Blockchain Developer (medio tiempo)
+        periodo: Dic 2021 – Jun 2022
+        logros:
+          - >-
+            Colaboró en una aplicación móvil interactiva que combinaba sistemas de juego en tiempo real
+            con gestión de activos digitales respaldados por blockchain, llevándola de prototipo a
+            lanzamiento de MVP en siete meses.
+          - >-
+            Construyó funcionalidades de gameplay y sistemas interactivos en tiempo real en Unity y C#
+            dentro de una base de código productiva existente, e implementó smart contracts en Solidity
+            para la propiedad de objetos dentro del juego.
+
+educacion:
+  - institucion: Tecnológico de Monterrey
+    grado: Master of Science (MSc), Applied Artificial Intelligence
+    estado: En curso — graduación esperada en diciembre de 2026
+    descripcion: >-
+      Enfocada en el diseño, despliegue y operación de sistemas de machine learning en ambientes
+      productivos, con énfasis en arquitecturas escalables, IA aplicada y sistemas de decisión basados
+      en datos.
+    proyecto_final: >-
+      Capstone terminado, en espera de calificación: motor de dynamic difficulty adjustment que combina
+      contextual bandits y clasificación supervisada para modelar al jugador, evaluado en FightingICE,
+      la plataforma de la competencia internacional Fighting Game AI. Desarrollado en equipo, con
+      WabiByte como contexto de negocio.
+
+  - institucion: Middlesex University
+    grado: Bachelor of Science (BSc Hons), Computer Science — Games Programming
+    anio: 2022
+    calificacion: Upper Second-Class Honours (2:1)
+    descripcion: >-
+      Su tesis analizó cómo los desarrolladores estaban adaptando blockchain a los videojuegos; de ella
+      derivó Euler Labs, la empresa de tecnología para videojuegos que fundó y desarrolló en solitario.
+
+practicas_llmops_mlops:
+  - >-
+    Fine-tuning: ha trabajado con modelos con fine-tuning llevados a producción en Grupo Coppel, además
+    de experimentación extensa para decidir cuándo conviene frente a prompting.
+
+  - >-
+    Bases vectoriales en Google Cloud para sistemas RAG en producción.
+
+  - >-
+    Integración de herramientas y fuentes de datos con Model Context Protocol (MCP).
+  - >-
+    Evaluación de sistemas RAG con métricas de retrieval (Hit Rate@5, MRR, Precision@5) y de
+    generación (fidelidad y relevancia).
+  - >-
+    Observabilidad de aplicaciones con LLMs usando LangSmith, Langfuse y Cloud Logging.
+  - >-
+    Versionado de datos con DVC, seguimiento de experimentos con MLflow y orquestación con Cloud
+    Composer y Vertex AI Pipelines; infraestructura como código con Terraform, Docker y CI/CD.
+
+proyectos_destacados:
+  - nombre: ATLAS
+    contexto: Grupo Coppel — CENIC
+    descripcion: >-
+      Motor de RAG agéntico y búsqueda semántica sobre un data catalog empresarial de más de 2,200
+      tablas en 17 dominios. Ayuda a los stakeholders a descubrir y justificar el acceso a los datos
+      que necesitan. Incluye un marco de evaluación de retrieval y generación.
+    tecnologias: [LangGraph, LangChain, Ollama, ChromaDB]
+  - nombre: Asistentes RAG corporativos
+    contexto: Grupo Coppel (proyecto con otras áreas de la organización)
+    descripcion: >-
+      Conjunto de asistentes RAG internos en uso real en producción para el corporativo. Su
+      participación fue la evaluación de modelos (Claude y GPT vía API) y la integración de OpenWebUI
+      como interfaz, con observabilidad en LangSmith, Langfuse y Cloud Logging.
+    tecnologias: [Claude API, GPT API, OpenWebUI, LangSmith, Langfuse, Cloud Logging]
+
+  - nombre: Matriz de atributos
+    contexto: Grupo Coppel
+    descripcion: >-
+      Uso de LLMs para completar automáticamente atributos de productos (SKUs) del catálogo.
+  - nombre: Cash demand forecasting
+    contexto: BanCoppel
+    descripcion: >-
+      Pipeline semanal en producción que soporta 828 modelos de pronóstico de demanda de efectivo a
+      nivel sucursal, desde las fuentes operativas hasta los dashboards de reporte.
+    tecnologias: [Google Cloud, BigQuery, Vertex AI, Looker]
+  - nombre: Agente de CV (Reto IA Banorte)
+    contexto: Este mismo agente
+    descripcion: >-
+      Agente conversacional compatible con Open Responses, desplegado en Cloud Run con Gemini en
+      Vertex AI, autenticación con Secret Manager, guardrails contra prompt injection y evaluaciones
+      automáticas como compuerta de CI/CD.
+    tecnologias: [FastAPI, Cloud Run, Vertex AI, Gemini, GitHub Actions, Secret Manager]
+  - nombre: Dynamic difficulty adjustment con FightingICE
+    contexto: Capstone de la maestría en el Tecnológico de Monterrey
+    descripcion: >-
+      Motor de ajuste dinámico de dificultad con contextual bandits y clasificación supervisada,
+      evaluado sobre la plataforma de la competencia internacional Fighting Game AI.
+  - nombre: Euler Labs
+    contexto: Empresa propia (2021–2023)
+    descripcion: >-
+      Estudio de videojuegos con propiedad de activos en blockchain bajo la premisa "primero el
+      gameplay": sistemas de gameplay en Unity/C#, smart contracts, almacenamiento descentralizado y
+      telemetría de jugadores para guiar el diseño.
+    tecnologias: [Unity, C#, Smart contracts, Almacenamiento descentralizado]
+
+habilidades:
+  ai_llmops:
+    - Agentic RAG
+    - Semantic search
+    - Bases vectoriales en Google Cloud
+    - Retrieval evaluation
+    - Embedding benchmarking
+    - Fine-tuning
+    - Model Context Protocol (MCP)
+    - LangGraph
+    - LangChain
+    - LangSmith
+    - Langfuse
+    - OpenWebUI
+    - ChromaDB
+    - Ollama
+    - Local LLM inference
+    - Open Responses
+    - Contextual bandits
+  ml_mlops:
+    - Vertex AI
+    - Vertex AI Pipelines
+    - MLflow
+    - DVC
+    - Cloud Composer
+    - Cloud Run
+    - Docker
+    - Terraform
+    - CI/CD (GitHub Actions)
+    - FastAPI
+    - Model monitoring
+    - Forecasting
+  data_cloud:
+    - Google Cloud Platform
+    - BigQuery
+    - Cloud Storage
+    - Looker
+    - Dataproc
+    - PySpark
+    - Data governance
+    - Data quality
+  lenguajes_programacion:
+    - Python
+    - SQL
+    - C#
+    - C++
+    - JavaScript/TypeScript
+  otros_mencionados_en_experiencia:
+    - Unity
+    - Solidity
+    - Smart contracts
+    - Realidad aumentada y virtual
+    - Vue
+    - Kubernetes (básico)
+
+limites_conocidos:
+  - >-
+    Kubernetes: ha configurado manifiestos de Deployment y Service; no ha operado clusters ni
+    configurado HPA/Ingress en producción.
+  - >-
+    Su experiencia en nube es en Google Cloud; tiene poca experiencia en Azure (Azure OpenAI, Azure AI
+    Search) y OpenShift.
+
+politicas_de_respuesta:
+  - >-
+    WabiByte: si preguntan por clientes, indicar que WabiByte trabaja con clientes pero que los
+    detalles son confidenciales. No mencionar nombres, número de clientes ni montos.
+  - >-
+    Proyectos de Grupo Coppel: describirlos a nivel funcional, sin claves internas, montos ni datos
+    confidenciales.
