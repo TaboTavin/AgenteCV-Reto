@@ -2,7 +2,7 @@
 
 Este es mi proyecto para el Reto IA Banorte. Es un agente que contesta en español preguntas sobre mi perfil: experiencia, estudios, habilidades y proyectos. Solo usa lo que está en mi CV; si algo no aparece ahí, lo dice.
 
-Se conecta a la plataforma del reto con una URL y una clave. Sigue el formato [Open Responses](https://www.openresponses.org): recibe las preguntas en `POST /v1/responses` y puede contestar de golpe o ir mandando el texto mientras se genera.
+Se conecta a la plataforma del reto con una URL y una clave.
 
 ## Cómo está organizado
 
